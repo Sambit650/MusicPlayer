@@ -31,7 +31,7 @@ final class MusicPlayerViewModelTests: XCTestCase {
   func testCheckDataAvaility_emptyList() {
     sut.musicList = []
 
-    sut.loadData()
+    sut.checkDataAvaility()
     XCTAssertFalse(sut.isDataAvailbale)
   }
 
@@ -39,7 +39,7 @@ final class MusicPlayerViewModelTests: XCTestCase {
     let data = MusicData(title: "test1", artist: "test2", album: "test3", url: "test4")
     sut.musicList = [data]
 
-    sut.loadData()
+    sut.checkDataAvaility()
     XCTAssertTrue(sut.isDataAvailbale)
   }
 }
