@@ -8,7 +8,7 @@
 import Foundation
 import AVFoundation
 
-class AudioPlayer {
+final class AudioPlayer {
 
   // MARK: - Properties
 

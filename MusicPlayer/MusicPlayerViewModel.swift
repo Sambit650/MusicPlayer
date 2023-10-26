@@ -23,15 +23,19 @@ class MusicPlayerViewModel: ObservableObject {
   }
 
   func checkDataAvaility() {
-    isDataAvailbale = musicList.isEmpty ? false : true
+    DispatchQueue.main.async {
+      self.isDataAvailbale = self.musicList.isEmpty ? false : true
+    }
   }
 
   func loadData() {
     apiHandler.getMusicDetails(url: musicURLString) { result in
       switch result {
       case .success(let data):
-        self.musicList = data
-        self.checkDataAvaility()
+        DispatchQueue.main.async {
+          self.musicList = data
+          self.checkDataAvaility()
+        }
       case .failure(let error):
         // TODO
         print(error.localizedDescription)
