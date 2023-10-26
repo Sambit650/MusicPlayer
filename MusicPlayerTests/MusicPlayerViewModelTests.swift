@@ -31,15 +31,15 @@ final class MusicPlayerViewModelTests: XCTestCase {
   func testCheckDataAvaility_emptyList() {
     sut.musicList = []
 
+    sut.loadData()
     XCTAssertFalse(sut.isDataAvailbale)
   }
 
   func testCheckDataAvaility_withData() {
-    sut.musicList = []
     let data = MusicData(title: "test1", artist: "test2", album: "test3", url: "test4")
-    sut.musicList.append(data)
+    sut.musicList = [data]
 
+    sut.loadData()
     XCTAssertTrue(sut.isDataAvailbale)
   }
-
 }
