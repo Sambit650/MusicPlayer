@@ -40,7 +40,6 @@ struct MusicPlayerView: View {
         }
 
         Button {
-
           AudioPlayer.shared.playerSetUp(url: URL(string: viewModel.musicList[currentAudio].url)!)
           AudioPlayer.shared.startAudio()
         } label: {
@@ -49,7 +48,6 @@ struct MusicPlayerView: View {
             .frame(width: 60, height: 60)
             .foregroundColor(.blue)
         }
-
       }
     }
     .padding()
