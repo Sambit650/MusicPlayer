@@ -22,7 +22,7 @@
 		D6CF00A62AEAB1B6009DBD07 /* MusicPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF00A52AEAB1B6009DBD07 /* MusicPlayerApp.swift */; };
 		D6CF00AA2AEAB1B9009DBD07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6CF00A92AEAB1B9009DBD07 /* Assets.xcassets */; };
 		D6CF00AE2AEAB1B9009DBD07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6CF00AD2AEAB1B9009DBD07 /* Preview Assets.xcassets */; };
-		D6CF00B82AEAB1BA009DBD07 /* MusicPlayerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF00B72AEAB1BA009DBD07 /* MusicPlayerViewModelTests.swift */; };
+		D6CF00B82AEAB1BA009DBD07 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF00B72AEAB1BA009DBD07 /* HomeViewModelTests.swift */; };
 		D6CF00C22AEAB1BA009DBD07 /* MusicPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF00C12AEAB1BA009DBD07 /* MusicPlayerUITests.swift */; };
 		D6CF00C42AEAB1BA009DBD07 /* MusicPlayerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF00C32AEAB1BA009DBD07 /* MusicPlayerUITestsLaunchTests.swift */; };
 		D6CF00D62AEAB246009DBD07 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CF00D52AEAB246009DBD07 /* APIHandler.swift */; };
@@ -69,7 +69,7 @@
 		D6CF00AB2AEAB1B9009DBD07 /* MusicPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MusicPlayer.entitlements; sourceTree = "<group>"; };
 		D6CF00AD2AEAB1B9009DBD07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D6CF00B32AEAB1BA009DBD07 /* MusicPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6CF00B72AEAB1BA009DBD07 /* MusicPlayerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewModelTests.swift; sourceTree = "<group>"; };
+		D6CF00B72AEAB1BA009DBD07 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		D6CF00BD2AEAB1BA009DBD07 /* MusicPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6CF00C12AEAB1BA009DBD07 /* MusicPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerUITests.swift; sourceTree = "<group>"; };
 		D6CF00C32AEAB1BA009DBD07 /* MusicPlayerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 		D6CF00B62AEAB1BA009DBD07 /* MusicPlayerTests */ = {
 			isa = PBXGroup;
 			children = (
-				D6CF00B72AEAB1BA009DBD07 /* MusicPlayerViewModelTests.swift */,
+				D6CF00B72AEAB1BA009DBD07 /* HomeViewModelTests.swift */,
 			);
 			path = MusicPlayerTests;
 			sourceTree = "<group>";
@@ -376,7 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6CF00B82AEAB1BA009DBD07 /* MusicPlayerViewModelTests.swift in Sources */,
+				D6CF00B82AEAB1BA009DBD07 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +532,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -570,6 +571,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

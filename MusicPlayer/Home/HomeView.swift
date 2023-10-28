@@ -21,13 +21,18 @@ struct HomeView: View {
       ScrollView(.vertical, showsIndicators: false) {
         VStack(alignment: .leading, spacing: 0) {
           // Header
-          HomeHeaderView(headerStr: viewModel.headerStr)
+          HomeHeaderView(headerStr: viewModel.headerTitle)
           // Playlists
-          HomePlaylistView(playlists: viewModel.playlists, onSelect: viewModel.selectMusic(music:))
+          HomePlaylistView(title: viewModel.yourPlaylistText,
+                           playlists: viewModel.playlists,
+                           onSelect: viewModel.selectMusic(music:))
           // Recently Played
-          HomeRecentlyPlayedView(recentlyPlayed: viewModel.recentlyPlayed, onSelect: viewModel.selectMusic(music:))
+          HomeRecentlyPlayedView(title: viewModel.recentlyPlayedText,
+                                 recentlyPlayed: viewModel.recentlyPlayed,
+                                 onSelect: viewModel.selectMusic(music:))
           // Made for You
-          HomeMadeForView(onSelect: viewModel.selectMusic(music:))
+          HomeMadeForView(title: viewModel.madeForYouText,
+                          onSelect: viewModel.selectMusic(music:))
 
           Spacer()
             .frame(height: 150)
@@ -68,10 +73,10 @@ fileprivate struct HomeHeaderView: View {
 }
 
 fileprivate struct HomePlaylistView: View {
-  let playlists: [MusicModel], onSelect: (MusicModel) -> ()
+  let title: String, playlists: [MusicModel], onSelect: (MusicModel) -> ()
   var body: some View {
     VStack(alignment: .leading, spacing: 0) {
-      Text("Your Playlist")
+      Text(title)
         .foregroundColor(.text_header)
         .modifier(FontModifier(.bold, size: 20))
         .padding(.leading, HORIZONTAL_SPACING)
@@ -92,10 +97,10 @@ fileprivate struct HomePlaylistView: View {
 }
 
 fileprivate struct HomeRecentlyPlayedView: View {
-  let recentlyPlayed: [MusicModel], onSelect: (MusicModel) -> ()
+  let title: String, recentlyPlayed: [MusicModel], onSelect: (MusicModel) -> ()
   var body: some View {
     VStack(alignment: .leading, spacing: 0) {
-      Text("Recently Played")
+      Text(title)
         .foregroundColor(.text_header)
         .modifier(FontModifier(.bold, size: 20))
         .padding(.leading, HORIZONTAL_SPACING)
@@ -116,10 +121,10 @@ fileprivate struct HomeRecentlyPlayedView: View {
 }
 
 fileprivate struct HomeMadeForView: View {
-  let onSelect: (MusicModel) -> ()
+  let title: String, onSelect: (MusicModel) -> ()
   var body: some View {
     VStack(alignment: .leading, spacing: 0) {
-      Text("Made for You")
+      Text(title)
         .foregroundColor(.text_header)
         .modifier(FontModifier(.bold, size: 20))
         .padding(.leading, HORIZONTAL_SPACING)
